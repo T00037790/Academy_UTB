@@ -41,7 +41,7 @@ public class Managerial extends MainActivity implements Academia {
     }
 
     @Override
-    public void assistance(){
-        System.out.println("A Managerial has attended the event");
+    public String assistance(){
+        return "A Managerial has attended the event";
     }
 }

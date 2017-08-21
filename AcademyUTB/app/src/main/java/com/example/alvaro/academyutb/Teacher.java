@@ -41,8 +41,8 @@ public class Teacher extends MainActivity implements Academia {
     }
 
     @Override
-    public void assistance()
+    public String assistance()
     {
-        System.out.println("A teacher has attended the event");
+        return "A teacher has attended the event";
     }
 }
