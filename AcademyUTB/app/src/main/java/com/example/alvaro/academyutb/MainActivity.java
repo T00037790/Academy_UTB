@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ListView name_list;
     ListView role_list;
     String type;
+    EditText number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         People=new ArrayList<String>();
         Roles=new ArrayList<String>();
         texto =(EditText) findViewById(R.id.editText2);
+        number =(EditText) findViewById(R.id.counter);
         ArrayAdapter<String> Adapter= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,People);
         ArrayAdapter<String> Adapter2= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,Roles);
         name_list.setAdapter(Adapter);
@@ -100,6 +102,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(getBaseContext(), message , Toast.LENGTH_LONG).show();
                             Assitance tmp = Assitance.getInstance( );
                             int cont = Assitance.getContadorPersonas();
+                            String N = Integer.toString(cont);
+                            number.setText(N);
                             texto.setText("");
                             dialog.cancel();
                         }
