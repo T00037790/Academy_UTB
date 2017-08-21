@@ -5,5 +5,5 @@ package com.example.alvaro.academyutb;
  */
 
 public interface Academia {
-    public void asistencia();
+    public void assistance();
 }

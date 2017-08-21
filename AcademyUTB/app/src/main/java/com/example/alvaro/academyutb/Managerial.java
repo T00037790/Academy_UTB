@@ -5,8 +5,43 @@ package com.example.alvaro.academyutb;
  */
 
 public class Managerial extends MainActivity implements Academia {
+
+    private String name;
+    private String role;
+
+    public Managerial(){}
+
+    public Managerial (String nombre, String rol){
+        this.name = nombre;
+        this.role = rol;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
-    public void asistencia(){
-        System.out.println("nothing");
+    public String toString() {
+        return "Managerial{" +
+                "name='" + name + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+    }
+
+    @Override
+    public void assistance(){
+        System.out.println("A Managerial has attended the event");
     }
 }

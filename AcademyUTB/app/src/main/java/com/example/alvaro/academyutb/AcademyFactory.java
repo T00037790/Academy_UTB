@@ -5,14 +5,14 @@ package com.example.alvaro.academyutb;
  */
 
 public class AcademyFactory {
-    public static Academia getAcademia(String criteria)
+    public static Academia getAcademia(String role)
     {
-        switch (criteria) {
-            case "Recibiendo clases":
+        switch (role) {
+            case "Student":
                 return new Student();
-            case "Dando clases":
+            case "Teacher":
                 return new Teacher();
-            case "Laborando":
+            case "Managerial":
                 return new Managerial();
             default:
                 break;
